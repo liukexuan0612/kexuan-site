@@ -1,0 +1,64 @@
+/* ===== 这是"样式表"，决定网页长什么样 ===== */
+
+/* 1) 全局：字体、颜色、去掉默认边距 */
+:root {
+  --ink: #1a1a1a;      /* 主文字颜色 */
+  --muted: #6b7280;    /* 次要文字颜色 */
+  --accent: #2563eb;   /* 强调色（链接） */
+  --bg: #fafafa;       /* 背景色 */
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* 2) 内容宽度：居中，最大 720px，手机上自动留白 */
+.hero, main, footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+/* 3) 顶部区 */
+.hero { padding-top: 56px; padding-bottom: 8px; }
+.hero h1 { margin: 0; font-size: 2.2rem; letter-spacing: -0.02em; }
+.tagline { color: var(--muted); margin-top: 6px; }
+.links a { color: var(--accent); text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+/* 4) 小节标题 */
+h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 6px;
+  margin-top: 36px;
+}
+
+/* 5) 项目卡片 */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 12px 0;
+}
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+
+/* 6) 技能列表 */
+.skills { padding-left: 18px; }
+.muted { color: var(--muted); }
+
+/* 7) 页脚 */
+footer { color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+/* 8) 手机屏幕微调 */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.7rem; }
+}
